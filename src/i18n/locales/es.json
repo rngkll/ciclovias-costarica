@@ -136,6 +136,27 @@
       "title": "¿Observaste algo nuevo?",
       "subtitle": "Tu reporte alimenta la base de datos y acelera mejoras reales",
       "button": "Reportar Problema"
+    },
+    "contribute": {
+      "label": "Contribuye datos",
+      "heading": "Actualiza CyclOSM desde aquí",
+      "subheading": "CyclOSM no siempre refleja los últimos carriles oficiales; tú puedes aportar evidencia",
+      "steps": {
+        "locate": {
+          "title": "Ubica la ciclovía",
+          "description": "Busca la ruta o sector y anota el tramo que faltaba"
+        },
+        "capture": {
+          "title": "Captura evidencia",
+          "description": "Toma fotos, traza GPS o registra referencias visibles"
+        },
+        "report": {
+          "title": "Reporta con nosotros",
+          "description": "Envía la información vía el formulario de reportes para que la comunidad valide y mapee"
+        }
+      },
+      "cta": "Reportar ahora",
+      "note": "Tus datos alimentan CyclOSM y ayudan a que los municipios prioricen mejoras"
     }
   },
   "footer": {

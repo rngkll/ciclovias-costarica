@@ -1,9 +1,32 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 import L from 'leaflet'
 
 const { t } = useI18n()
+const route = useRoute()
+
+const locale = computed(() => (route.params.locale as string) || 'es')
+const reportUrl = computed(() => `/${locale.value}/reportar`)
+
+const contributeSteps = computed(() => [
+  {
+    icon: '📍',
+    title: t('map.contribute.steps.locate.title'),
+    description: t('map.contribute.steps.locate.description'),
+  },
+  {
+    icon: '📸',
+    title: t('map.contribute.steps.capture.title'),
+    description: t('map.contribute.steps.capture.description'),
+  },
+  {
+    icon: '📝',
+    title: t('map.contribute.steps.report.title'),
+    description: t('map.contribute.steps.report.description'),
+  },
+])
 
 const mapContainer = ref<HTMLDivElement | null>(null)
 let map: L.Map | null = null
@@ -89,6 +112,25 @@ onBeforeUnmount(() => {
           <button class="hero-cta ghost">{{ t('map.cta.button') }}</button>
         </div>
       </aside>
+    </section>
+
+    <section class="contribute-panel">
+      <div class="contribute-panel__content">
+        <p class="section-label">{{ t('map.contribute.label') }}</p>
+        <h3>{{ t('map.contribute.heading') }}</h3>
+        <p class="section-description">{{ t('map.contribute.subheading') }}</p>
+        <div class="contribute-grid">
+          <article v-for="step in contributeSteps" :key="step.title" class="contribute-step">
+            <span class="contribute-icon" aria-hidden="true">{{ step.icon }}</span>
+            <h4>{{ step.title }}</h4>
+            <p>{{ step.description }}</p>
+          </article>
+        </div>
+        <div class="hero-actions">
+          <a :href="reportUrl" class="hero-cta">{{ t('map.contribute.cta') }}</a>
+        </div>
+        <p class="contribute-note">{{ t('map.contribute.note') }}</p>
+      </div>
     </section>
   </div>
 </template>
@@ -251,6 +293,57 @@ onBeforeUnmount(() => {
 .hero-cta.ghost {
   background: transparent;
   border: 1px solid #0f172a;
+  color: #0f172a;
+}
+
+.contribute-panel {
+  background: #0f172a;
+  color: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+}
+
+.contribute-panel__content h3 {
+  font-size: clamp(1.75rem, 2.5vw, 2.2rem);
+  margin-top: 0.25rem;
+}
+
+.contribute-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contribute-step {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-height: 140px;
+}
+
+.contribute-icon {
+  font-size: 1.5rem;
+}
+
+.contribute-step h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.contribute-note {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+.contribute-panel .hero-actions {
+  margin-top: 1.5rem;
+}
+
+.contribute-panel .hero-cta {
+  background: white;
   color: #0f172a;
 }
 

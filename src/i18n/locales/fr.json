@@ -136,6 +136,27 @@
       "title": "Vous remarquez quelque chose de nouveau ?",
       "subtitle": "Votre signalement alimente la base et accélère les améliorations",
       "button": "Signaler un problème"
+    },
+    "contribute": {
+      "label": "Contribuez des données",
+      "heading": "Mettez CyclOSM à jour depuis ici",
+      "subheading": "CyclOSM ne reflète pas toujours les dernières pistes ; vous pouvez ajouter la preuve",
+      "steps": {
+        "locate": {
+          "title": "Repérez la piste",
+          "description": "Trouvez le tronçon manquant et notez-le"
+        },
+        "capture": {
+          "title": "Capturez des preuves",
+          "description": "Prenez des photos, tracez un itinéraire GPS ou décrivez des repères"
+        },
+        "report": {
+          "title": "Envoyez-le-nous",
+          "description": "Utilisez le formulaire pour que la communauté vérifie et cartographie"
+        }
+      },
+      "cta": "Signaler maintenant",
+      "note": "Vos données alimentent CyclOSM et aident les communes à prioriser les améliorations"
     }
   },
   "footer": {

@@ -136,6 +136,27 @@
       "title": "See something new?",
       "subtitle": "Your report feeds the database and speeds up real improvements",
       "button": "Report Problem"
+    },
+    "contribute": {
+      "label": "Contribute data",
+      "heading": "Update CyclOSM from here",
+      "subheading": "CyclOSM does not always reflect the latest lanes; you can add proof",
+      "steps": {
+        "locate": {
+          "title": "Spot the lane",
+          "description": "Find the route or neighborhood and note the missing segment"
+        },
+        "capture": {
+          "title": "Capture evidence",
+          "description": "Take photos, record a GPS trace, or flag visible landmarks"
+        },
+        "report": {
+          "title": "Send it to us",
+          "description": "Use the report form so the community can review and map the update"
+        }
+      },
+      "cta": "Report now",
+      "note": "Your data feeds CyclOSM and helps municipalities prioritize improvements"
     }
   },
   "footer": {
