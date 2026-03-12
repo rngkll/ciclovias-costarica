@@ -112,6 +112,32 @@
       }
     }
   },
+  "map": {
+    "hero": {
+      "title": "Explore Costa Rica's cycling network",
+      "subtitle": "CyclOSM and community data join forces to show existing lanes, proposals, and latest reports",
+      "cta": "Report a critical spot"
+    },
+    "stats": {
+      "coverage": "Kilometers traced",
+      "municipalities": "Municipalities mapped",
+      "communities": "Active collectives"
+    },
+    "details": {
+      "title": "Available layers",
+      "description": "Toggle existing lanes, planned projects, priority infrastructure, and citizen reports with one click"
+    },
+    "layers": {
+      "existing": "Live bike routes",
+      "planned": "Projects in progress",
+      "community": "Community reports"
+    },
+    "cta": {
+      "title": "See something new?",
+      "subtitle": "Your report feeds the database and speeds up real improvements",
+      "button": "Report Problem"
+    }
+  },
   "footer": {
     "openSource": "Open Source",
     "dataSource": "Data from public sources"

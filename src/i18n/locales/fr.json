@@ -112,6 +112,32 @@
       }
     }
   },
+  "map": {
+    "hero": {
+      "title": "Explorez le réseau cyclable du Costa Rica",
+      "subtitle": "CyclOSM et les données communautaires s'unissent pour afficher les voies existantes, les propositions et les derniers signalements",
+      "cta": "Signaler un point critique"
+    },
+    "stats": {
+      "coverage": "Kilomètres tracés",
+      "municipalities": "Communes cartographiées",
+      "communities": "Collectifs actifs"
+    },
+    "details": {
+      "title": "Couches disponibles",
+      "description": "Activez pistes existantes, projets planifiés, infrastructures prioritaires et signalements citoyens en un clic"
+    },
+    "layers": {
+      "existing": "Pistes opérationnelles",
+      "planned": "Projets en cours",
+      "community": "Signalements communautaires"
+    },
+    "cta": {
+      "title": "Vous remarquez quelque chose de nouveau ?",
+      "subtitle": "Votre signalement alimente la base et accélère les améliorations",
+      "button": "Signaler un problème"
+    }
+  },
   "footer": {
     "openSource": "Code Ouvert",
     "dataSource": "Données de sources publiques"

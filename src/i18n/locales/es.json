@@ -112,6 +112,32 @@
       }
     }
   },
+  "map": {
+    "hero": {
+      "title": "Explora la red ciclista de Costa Rica",
+      "subtitle": "CyclOSM y los datos comunitarios se combinan para mostrar ciclovías existentes, propuestas y reportes recientes",
+      "cta": "Reportar un punto crítico"
+    },
+    "stats": {
+      "coverage": "Kilómetros trazados",
+      "municipalities": "Municipios mapeados",
+      "communities": "Colectivos activos"
+    },
+    "details": {
+      "title": "Capas disponibles",
+      "description": "Activa ciclovías existentes, rutas planificadas, infraestructura priorizada y reportes ciudadanos con un par de clics"
+    },
+    "layers": {
+      "existing": "Ciclorrutas ya operativas",
+      "planned": "Proyectos en proceso",
+      "community": "Informes de la comunidad"
+    },
+    "cta": {
+      "title": "¿Observaste algo nuevo?",
+      "subtitle": "Tu reporte alimenta la base de datos y acelera mejoras reales",
+      "button": "Reportar Problema"
+    }
+  },
   "footer": {
     "openSource": "Código abierto",
     "dataSource": "Datos de fuentes públicas"
