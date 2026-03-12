@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import MapView from '@/views/MapView.vue'
+import AdvocacyPage from '@/views/AdvocacyPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/:locale/mapa',
       name: 'map',
       component: MapView,
+    },
+    {
+      path: '/:locale/advocacy',
+      name: 'advocacy',
+      component: AdvocacyPage,
     },
     {
       path: '/about',

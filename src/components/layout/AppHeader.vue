@@ -12,7 +12,7 @@ const currentLocale = computed(() => (route.params.locale as string) || 'es')
 const navigationItems = computed(() => [
   { name: 'home', path: `/${currentLocale.value}`, label: t('nav.home') },
   { name: 'map', path: `/${currentLocale.value}/mapa`, label: t('nav.map') },
-  { name: 'advocacy', path: `/${currentLocale.value}/advocacia`, label: t('nav.advocacy') },
+  { name: 'advocacy', path: `/${currentLocale.value}/advocacy`, label: t('nav.advocacy') },
   { name: 'status', path: `/${currentLocale.value}/estado`, label: t('nav.status') },
   { name: 'report', path: `/${currentLocale.value}/reportar`, label: t('nav.report') },
 ])

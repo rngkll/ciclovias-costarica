@@ -159,6 +159,49 @@
       "note": "Tus datos alimentan CyclOSM y ayudan a que los municipios prioricen mejoras"
     }
   },
+  "advocacy": {
+    "hero": {
+      "badge": "Colectivos activos",
+      "title": "Grupos que dibujan ciclovías",
+      "subtitle": "Colaboramos con equipos de provincia para mapear rutas, validar reportes y acompañar a los municipios",
+      "ctaMap": "Ver mapa comunitario",
+      "ctaReport": "Reportar un hallazgo"
+    },
+    "stats": {
+      "groups": "Redes nacionales",
+      "regions": "Provincias acompañadas",
+      "reports": "Reportes verificados"
+    },
+    "groups": {
+      "label": "Aliados en acción",
+      "title": "Colectivos y municipios participantes",
+      "description": "Estos equipos combinan terreno, datos abiertos y reportes ciudadanos para mantener CyclOSM alineado con la realidad",
+      "urban": {
+        "title": "Red Urbana Ciclista",
+        "location": "Gran Área Metropolitana",
+        "description": "Voluntarios trabajan en inventarios de rutas protegidas, coordinan rutas escolares y comparten geometrias actualizadas",
+        "linkLabel": "Ver su trabajo"
+      },
+      "mountain": {
+        "title": "Cartago Sobre Ruedas",
+        "location": "Valle de Orosi y alrededores",
+        "description": "Acompañan a municipios y ciclistas de montaña para trazar carreteras seguras y documentar nuevos carriles",
+        "linkLabel": "Seguir la iniciativa"
+      },
+      "community": {
+        "title": "Movimiento Verde",
+        "location": "Provincias centrales",
+        "description": "Impulsan eventos de mapeo colaborativo y reportan obstáculos urbanos para evidencias a nivel nacional",
+        "linkLabel": "Unirse al movimiento"
+      }
+    },
+    "cta": {
+      "title": "Acompaña una campaña comunitaria",
+      "description": "Comparte rutas, registra barreras y apoya los reportes para acelerar soluciones reales",
+      "report": "Reportar ahora",
+      "map": "Explorar mapa"
+    }
+  },
   "footer": {
     "openSource": "Código abierto",
     "dataSource": "Datos de fuentes públicas"

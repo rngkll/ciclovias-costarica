@@ -159,6 +159,49 @@
       "note": "Vos données alimentent CyclOSM et aident les communes à prioriser les améliorations"
     }
   },
+  "advocacy": {
+    "hero": {
+      "badge": "Collectifs actifs",
+      "title": "Groupes qui dessinent les pistes",
+      "subtitle": "Nous collaborons avec des équipes provinciales pour cartographier les itinéraires, valider les signalements et soutenir les municipalités",
+      "ctaMap": "Voir la carte communautaire",
+      "ctaReport": "Signaler une découverte"
+    },
+    "stats": {
+      "groups": "Réseaux nationaux",
+      "regions": "Provinces accompagnées",
+      "reports": "Signalements vérifiés"
+    },
+    "groups": {
+      "label": "Alliés en action",
+      "title": "Collectifs et municipalités partenaires",
+      "description": "Ces équipes combinent terrain, données ouvertes et signalements citoyens pour garder CyclOSM proche de la réalité",
+      "urban": {
+        "title": "Réseau urbain cyclable",
+        "location": "Grande Région Métropolitaine",
+        "description": "Les bénévoles tiennent à jour les inventaires, coordonnent les trajets scolaires et partagent les géométries",
+        "linkLabel": "Voir leur travail"
+      },
+      "mountain": {
+        "title": "Cartago Sur Deux Roues",
+        "location": "Vallée d'Orosi et alentours",
+        "description": "Ils accompagnent municipalités et cyclistes de montagne pour tracer des routes sûres et documenter les nouvelles pistes",
+        "linkLabel": "Suivre l'initiative"
+      },
+      "community": {
+        "title": "Mouvement Vert",
+        "location": "Provinces centrales",
+        "description": "Ils organisent des cartographies collaboratives et signalent les obstacles urbains pour constituer des preuves nationales",
+        "linkLabel": "Rejoindre le mouvement"
+      }
+    },
+    "cta": {
+      "title": "Rejoignez une campagne communautaire",
+      "description": "Partagez des itinéraires, consignez des barrières et amplifiez les signalements pour faire avancer les solutions",
+      "report": "Signaler maintenant",
+      "map": "Explorer la carte"
+    }
+  },
   "footer": {
     "openSource": "Code Ouvert",
     "dataSource": "Données de sources publiques"

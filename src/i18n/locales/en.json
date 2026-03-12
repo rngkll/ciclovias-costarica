@@ -159,6 +159,49 @@
       "note": "Your data feeds CyclOSM and helps municipalities prioritize improvements"
     }
   },
+  "advocacy": {
+    "hero": {
+      "badge": "Active collectives",
+      "title": "Groups shaping bike lanes",
+      "subtitle": "We partner with provincial teams to map routes, validate reports, and support municipalities",
+      "ctaMap": "See the community map",
+      "ctaReport": "Report a finding"
+    },
+    "stats": {
+      "groups": "National networks",
+      "regions": "Provinces supported",
+      "reports": "Verified reports"
+    },
+    "groups": {
+      "label": "Allies in action",
+      "title": "Participating collectives & municipalities",
+      "description": "These teams blend fieldwork, open data, and citizen reports to keep CyclOSM aligned with reality",
+      "urban": {
+        "title": "Urban Bike Network",
+        "location": "Greater Metropolitan Area",
+        "description": "Volunteers maintain inventories of protected lanes, coordinate school routes, and share updated geometries",
+        "linkLabel": "See their work"
+      },
+      "mountain": {
+        "title": "Cartago On Wheels",
+        "location": "Orosi Valley and surroundings",
+        "description": "They guide municipalities and mountain cyclists to trace safe roads and document new lanes",
+        "linkLabel": "Follow the initiative"
+      },
+      "community": {
+        "title": "Green Movement",
+        "location": "Central provinces",
+        "description": "They host collaborative mapping events and report urban obstacles to build national evidence",
+        "linkLabel": "Join the movement"
+      }
+    },
+    "cta": {
+      "title": "Join a community campaign",
+      "description": "Share routes, log barriers, and boost reports so real solutions roll out faster",
+      "report": "Report now",
+      "map": "Explore the map"
+    }
+  },
   "footer": {
     "openSource": "Open Source",
     "dataSource": "Data from public sources"
