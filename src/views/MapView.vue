@@ -68,20 +68,6 @@ onBeforeUnmount(() => {
           <button class="hero-cta">{{ t('map.hero.cta') }}</button>
         </div>
       </div>
-      <div class="map-hero__stats">
-        <div class="stat-card">
-          <p class="stat-number">1,240</p>
-          <p class="stat-label">{{ t('map.stats.coverage') }}</p>
-        </div>
-        <div class="stat-card">
-          <p class="stat-number">38</p>
-          <p class="stat-label">{{ t('map.stats.municipalities') }}</p>
-        </div>
-        <div class="stat-card">
-          <p class="stat-number">+22</p>
-          <p class="stat-label">{{ t('map.stats.communities') }}</p>
-        </div>
-      </div>
     </section>
 
     <section class="map-panel">
@@ -172,31 +158,6 @@ onBeforeUnmount(() => {
 
 .hero-actions {
   margin-top: 1.5rem;
-}
-
-.map-hero__stats {
-  display: flex;
-  gap: 1rem;
-}
-
-.stat-card {
-  flex: 1;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.stat-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin-top: 0.2rem;
 }
 
 .map-panel {
