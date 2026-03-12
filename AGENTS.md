@@ -1,8 +1,9 @@
-# Agent Instructions for Ciclovias Costa Rica
+# Agent Instructions: Ciclovias Costa Rica
 
-This document provides guidelines for AI coding agents working on the Ciclovias Costa Rica project - a platform to track and visualize bike lane infrastructure in Costa Rica.
 
 ## Project Overview
+
+This document is the single source of truth for agentic contributors working on `ciclovias-app`. It captures current build commands, code style expectations, and productivity notes to help keep the project intentional, readable, and easy to extend.
 
 This project aims to check and display the current state of bike lanes across Costa Rica. The codebase is in early stages and will evolve to include mapping, data collection, and visualization features.
 
@@ -16,188 +17,122 @@ This project aims to check and display the current state of bike lanes across Co
 - vue.js
 - CyclOSM
 
-## Build, Test & Lint Commands
+## Quick Context
 
-### Setup
-```bash
-# Installation (update once package.json exists)
-npm install
-# or
-pip install -r requirements.txt
-```
+- **Framework**: Vue 3 + Vite with `script setup` + Pinia for state.
+- **Styling**: Tailwind CSS 4 via `@tailwindcss/vite` plus component-scoped CSS modules.
+- **Routing + i18n**: `vue-router@5` and `vue-i18n@11`, with locales in `src/i18n/locales/{en,es,fr}.json` and the default site language Spanish.
+- **Data focus**: Geographic data follows WGS84 (long, lat) and the UI prioritizes Costa Rican bike-lane insight.
 
-### Build Commands
-```bash
-# Build for production
-npm run build
-# or
-python -m build
-```
+## Env Setup
 
-### Test Commands
-```bash
-# Run all tests
-npm test
-# or
-pytest
+- Node 20+ (locked via `engines.node`).
+- TypeScript 5.9.x with `vue-tsc --build` for type safety.
+- Alias `@` → `src` configured in `vite.config.ts` and `tsconfig.*`.
 
-# Run a single test file
-npm test -- path/to/test.spec.ts
-# or
-pytest path/to/test_file.py
+## Build / Dev / Test Commands
 
-# Run tests with coverage
-npm run test:coverage
-# or
-pytest --cov
+- `npm install` — install deps (run once per machine or after dependency bump).
+- `npm run dev` — hot-reload local site at http://localhost:5173 (Vite dev server).
+- `npm run build` — production build (runs `type-check` then `vite build`).
+- `npm run type-check` — static type validation across the project via `vue-tsc`.
+- `npm run preview` — preview the production build locally (`vite preview`).
 
-# Run tests in watch mode
-npm run test:watch
-# or
-pytest-watch
-```
+### Lint / Format
 
-### Lint & Format
-```bash
-# Lint code
-npm run lint
-# or
-flake8 .
+- `npm run lint` — umbrella task that runs both `lint:eslint` and `lint:oxlint` via `npm-run-all2`.
+- `npm run lint:eslint` — ESLint (Vue + TypeScript + Oxc) with `--fix` and cache enabled.
+- `npm run lint:oxlint` — `oxlint . --fix`, which enforces additional correctness rules.
+- `npm run format` — Prettier applies the config under `.prettierrc.json` (single quotes, no semicolons, 100 print width).
 
-# Fix linting issues automatically
-npm run lint:fix
-# or
-black . && isort .
+### Running Tests
 
-# Format code
-npm run format
-# or
-prettier --write "**/*.{js,ts,tsx,json,md}"
-```
-
-### Development
-```bash
-# Start development server
-npm run dev
-# or
-python manage.py runserver
-```
+- This repo currently ships without explicit test scripts—the `scripts` block has no `test` entry and no spec files yet.
+- When you add a test runner (Vitest, Jest, or playwright, etc.), add a dedicated script such as `npm run test`.
+- **Single file**: mimic the future command with `npm run test -- path/to/suite.spec.ts` or `npm run test -- path/to/file.test.ts` once available.
+- Focus on small, deterministic units (composables, services) before adding UI coverage.
 
 ## Code Style Guidelines
 
-### General Principles
-- Write clear, self-documenting code with meaningful variable and function names
-- Prefer composition over inheritance
-- Keep functions small and focused (single responsibility principle)
-- Comment *why* not *what* - code should be self-explanatory
-- Use early returns to reduce nesting
-- Avoid magic numbers - use named constants
-
-### File Organization
-- Group related functionality together
-- Keep files focused and under 300 lines when possible
-- Place types/interfaces near their usage
-- Use index files for clean exports from directories
-
-### Naming Conventions
-- **Files**: Use kebab-case for files: `bike-lane-service.ts`, `map-utils.py`
-- **Classes**: Use PascalCase: `BikeLaneController`, `MapService`
-- **Functions/Methods**: Use camelCase: `getBikeLanes()`, `calculateDistance()`
-- **Constants**: Use SCREAMING_SNAKE_CASE: `MAX_ZOOM_LEVEL`, `API_BASE_URL`
-- **Private members**: Prefix with underscore: `_internalMethod()`, `_cache`
-- **Boolean variables**: Use is/has/should prefixes: `isActive`, `hasPermission`, `shouldUpdate`
-
 ### Imports
-- Group imports in this order:
-  1. External/third-party dependencies
-  2. Internal/local modules
-  3. Types and interfaces
-  4. CSS/assets
-- Use absolute imports when available (e.g., `@/components`, `src/utils`)
-- Avoid wildcard imports (`import *`) - be explicit about what you import
-- Remove unused imports before committing
 
-Example:
-```typescript
-import React, { useState, useEffect } from 'react';
-import { Map } from 'leaflet';
+- Order imports consistently: 1) external packages, 2) shared internal utilities or stores (using alias `@`), 3) types/interfaces, 4) styles/assets.
+- Keep imports explicit—avoid `import *`.
+- Prefer alias paths (e.g., `@/components`) when available to prevent brittle relative paths.
+- Always remove unused imports before a PR (ESLint + OXLint catch leftovers but tidy proactively).
 
-import { BikeLaneService } from '@/services/bike-lane-service';
-import { calculateDistance } from '@/utils/geo-utils';
+### Naming & Organization
 
-import type { BikeLane, Coordinates } from '@/types';
+- **Files**: kebab-case (`bike-lane-map.vue`, `map-utils.ts`).
+- **Components / Classes**: PascalCase (`BikeLaneGrid`, `MapStore`).
+- **Functions / Composables**: camelCase; Boolean-returning helpers should use `is`, `has`, or `should` prefixes (`isVisible`, `hasValidGeometry`).
+- **Constants**: SCREAMING_SNAKE, especially for config values, string literals, or API URLs.
+- **Stores & Composables**: keep hooks focused (`useBikeLaneFilters`, `useMapBounds`) and colocate related types near usage.
 
-import styles from './map-view.module.css';
-```
+### Vue / TypeScript Patterns
 
-### Type Safety
-- Always use TypeScript when applicable (avoid `any` type)
-- Define interfaces for data structures and API responses
-- Use type inference where obvious, explicit types for function signatures
-- Leverage union types and discriminated unions for state management
-- Add Python type hints to all function signatures
+- Prefer `<script setup lang="ts">` for component logic.
+- Keep props typed with `defineProps` + `PropType` when necessary; provide defaults using `withDefaults`.
+- Use `defineEmits` with typed event payloads.
+- Export composables/stores as named exports; prefer `const useBikeLanesStore = defineStore('bike-lanes', { ... })` over anonymous defaults.
+- Avoid `any`: either strongly type an object or rely on inference; explicit return types for async helpers are encouraged for clarity.
 
-### Error Handling
-- Always handle errors explicitly - don't let them fail silently
-- Use try-catch blocks for operations that can fail
-- Log errors with context (what operation failed, relevant IDs/data)
-- Return error objects or use Result types instead of throwing when appropriate
-- Validate user input and external data at boundaries
-- Provide meaningful error messages for end users
+### State + Stores
 
-Example:
-```typescript
-try {
-  const bikeLanes = await bikeLaneService.fetchAll();
-  return { success: true, data: bikeLanes };
-} catch (error) {
-  logger.error('Failed to fetch bike lanes', { error, userId });
-  return { success: false, error: 'Unable to load bike lanes. Please try again.' };
-}
-```
+- Pinia stores should expose getters and actions that mirror business intent (no low-level mutations in consumers).
+- Keep state normalized, co-locate shape definitions (interfaces) near the store file.
+- Use `store.$hydrate` or `setTimeout` sparingly—prefer derived getters or computed values.
 
-### Comments & Documentation
-- Add JSDoc/docstrings for public APIs and complex functions
-- Document assumptions, edge cases, and "why" decisions
-- Keep comments up to date when code changes
-- Avoid obvious comments that just restate the code
-- Use TODO comments with issue numbers: `// TODO(#123): Optimize query performance`
+### Styling
 
-### Testing
-- Write tests for all business logic and utilities
-- Use descriptive test names that explain the scenario
-- Follow AAA pattern: Arrange, Act, Assert
-- Mock external dependencies and APIs
-- Test edge cases and error conditions
-- Aim for high coverage but focus on meaningful tests
+- Base styles live in `src/assets/main.css` & `base.css`; component styles should use `<style scoped>`/module syntax.
+- Tailwind utility classes are allowed inside templates but keep markup readable by grouping related utilities and adding comments for dense patterns.
+- Use CSS variables for reusable color/spacing tokens (especially for gradients or themes).
+- Global gradients/background shapes should feel intentional—avoid plain flat walls; prefer layered gradients or subtle texture spans.
 
-## Geographic Data Considerations
+### Formatting & Linting Behavior
 
-Since this project deals with Costa Rican bike lanes:
-- Use WGS84 (EPSG:4326) coordinate system for lat/lng
-- Store coordinates as [longitude, latitude] per GeoJSON spec
-- Handle coordinate precision appropriately (5-6 decimal places)
-- Consider geographic queries and spatial indexing
-- Validate coordinates are within Costa Rica bounds (approximately: lat 8-11°N, lng -86 to -82°W)
+- The `.prettierrc.json` expects no semicolons, single quotes, and a 100-char print width—stick to it even outside Prettier runs.
+- ESLint config comes from `eslint.config.ts` (Vue essentials + OXLint). Align with rules like `correctness: error` and respect `.editorconfig` whitespace settings.
+- Auto-fix linters before reviews; if lint errors remain, capture rationale in the PR description.
 
-## Git Workflow
+### Error Handling and Side Effects
 
-- Write clear, descriptive commit messages
-- Use conventional commits format: `type(scope): description`
-  - Types: feat, fix, docs, style, refactor, test, chore
-- Keep commits focused and atomic
-- Reference issue numbers in commits: `fix(map): correct zoom level (#42)`
-- Always pull before pushing to avoid conflicts
+- Wrap async API calls in `try/catch`, log context details via `console.error`/custom logger before surfacing to UI.
+- Return structured responses (`{ success: boolean, data?, error? }`) from services backing UI components.
+- Validate inputs at boundaries—component props, API responses, and user-submitted forms should all be type-guarded.
+- Fail fast: use early returns in migrations or data transforms to skip invalid shapes rather than letting them propagate.
 
-## Questions & Decisions
+### Testing & Reliability (future-focused)
 
-When uncertain about implementation details:
-- Check existing patterns in the codebase first
-- Prioritize simplicity and readability
-- Consider performance implications for map/geo operations
-- Ask for clarification on user-facing features
-- Document architectural decisions in code or ADRs
+- Design tests around business logic: map filters, locale switching, report submission.
+- Adopt Arrange-Act-Assert structure; mock services (Leaflet, external APIs) when necessary.
+- Capture edge cases for geographic data (null coords, out-of-bounds lat/lng).
+- When adding e2e specs, keep them limited (a handful of flows) to avoid flaky runs behind heavy map rendering.
 
----
+## Repository Etiquette
 
-**Note**: This document will evolve as the project grows. Update it when patterns change or new conventions are established.
+- Document decisions—use inline comments sparingly but write short ADRs in `docs/` or `RESEARCH.md` when direction is uncertain.
+- Keep files under ~300 lines when practical; split large components into logical subcomponents + composables.
+- Respect Spanish-first, multilingual UI goals; wrap visible strings with `i18n.t()` or `t()` helpers in components.
+- No `.cursor/rules` or `.github/copilot-instructions.md` exist currently—if they appear, integrate their directives here and note the addition.
+
+## Git & Collaboration
+
+- Use conventional commits (e.g., `feat(map): add bike lane heatmap`). Mention issues when relevant.
+- Rebase or merge cleanly; resolve conflicts locally, run lint/type-check before pushing.
+- Tag PRs that introduce translations so reviewers can verify all languages.
+
+## Monitoring & Observability
+
+- Keep logging concise; include route/id context for failures (e.g., `console.error('Fetch failed on /map', { route: router.currentRoute.value }`).
+- Track broken maps: capture Leaflet errors and surface them via UI alerts with retry hints.
+
+## Suggested Agent Workflows
+
+1. Start by running `npm run type-check` + `npm run lint` to confirm a clean slate.
+2. Build (`npm run build`) before PRs to guard against bundler regressions.
+3. If adding tests, create targeted scripts that wrap the chosen runner and document them here.
+4. Update this AGENTS file whenever you introduce new tooling, formatters, or global rules.
+
+This document should grow with the repo—keep it precise, actionable, and written in English. Verify new guidance against existing patterns before generalizing.
