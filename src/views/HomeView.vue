@@ -9,6 +9,7 @@ const locale = (route.params.locale as string) || 'es'
 
 const mapUrl = computed(() => `/${locale}/mapa`)
 const reportUrl = computed(() => `/${locale}/reportar`)
+const advocacyUrl = computed(() => `/${locale}/advocacy`)
 </script>
 
 <template>
@@ -56,11 +57,11 @@ const reportUrl = computed(() => `/${locale}/reportar`)
             <p class="stat-label">{{ t('home.stats.cartago.title') }}</p>
             <p class="stat-description">{{ t('home.stats.cartago.description') }}</p>
           </article>
-          <article class="stat-card">
+          <RouterLink :to="advocacyUrl" class="stat-card stat-card--link">
             <p class="stat-number">+15</p>
             <p class="stat-label">{{ t('home.stats.groups.title') }}</p>
             <p class="stat-description">{{ t('home.stats.groups.description') }}</p>
-          </article>
+          </RouterLink>
         </div>
       </div>
     </section>
@@ -193,6 +194,18 @@ const reportUrl = computed(() => `/${locale}/reportar`)
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card--link {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stat-card--link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.15);
 }
 
 .stat-description {
