@@ -12,6 +12,9 @@ This project aims to check and display the current state of bike lanes across Co
 - Main language of the site is going to be spanish
 - Everything is open source
 
+## Tool selection
+- CyclOSM
+
 ## Build, Test & Lint Commands
 
 ### Setup
