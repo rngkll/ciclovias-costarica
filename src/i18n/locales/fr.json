@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "map": "Carte",
+    "advocacy": "Plaidoyer",
+    "about": "À propos",
+    "status": "Statut",
+    "report": "Signaler"
+  },
+  "home": {
+    "hero": {
+      "highlight": "Réseau cyclable ouvert",
+      "title": "Ciclovías Costa Rica",
+      "subtitle": "Explorez et contribuez à l'état de l'infrastructure cycliste au Costa Rica",
+      "note": "Nous combinons données officielles, signaux communautaires et pistes futures",
+      "cta": {
+        "map": "Voir la Carte Interactive",
+        "advocacy": "Explorer le Plaidoyer",
+        "report": "Signaler un point critique"
+      }
+    },
+    "stats": {
+      "law": {
+        "title": "Loi 9660",
+        "description": "Oblige l'infrastructure cycliste dans les nouvelles routes"
+      },
+      "cartago": {
+        "title": "Cartago Mène",
+        "description": "La province la plus avancée en pistes cyclables du pays"
+      },
+      "groups": {
+        "title": "Groupes Actifs",
+        "description": "Communautés travaillant pour la mobilité durable"
+      }
+    },
+    "features": {
+      "title": "Fonctionnalités Clés",
+      "subtitle": "Outils pour explorer, comprendre et améliorer l'infrastructure cycliste du Costa Rica",
+      "map": {
+        "title": "Carte Interactive",
+        "description": "Visualisez les pistes cyclables existantes et proposées en utilisant des données ouvertes"
+      },
+      "advocacy": {
+        "title": "Groupes de Plaidoyer",
+        "description": "Découvrez les organisations travaillant pour la mobilité durable"
+      },
+      "report": {
+        "title": "Signaler les Problèmes",
+        "description": "Aidez à maintenir à jour les informations sur les pistes cyclables"
+      }
+    },
+    "cta": {
+      "title": "Vous voyez un problème avec une piste cyclable ?",
+      "subtitle": "Votre signalement aide à maintenir les informations à jour et à promouvoir les améliorations",
+      "button": "Signaler un Problème"
+    },
+    "mission": {
+      "label": "Notre mission",
+      "title": "Visibilité, données, communauté",
+      "description": "Nous centralisons l'information sur les pistes cyclables pour que collectifs, municipalités et décideurs agissent ensemble",
+      "points": {
+        "data": {
+          "title": "Données ouvertes",
+          "description": "Nous privilégions les sources publiques et les mesures communautaires pour suivre chaque kilomètre"
+        },
+        "community": {
+          "title": "Communauté active",
+          "description": "Nous collaborons avec les groupes locaux pour entendre les besoins réels"
+        },
+        "action": {
+          "title": "Actions claires",
+          "description": "Nous guidons cyclistes, municipalités et ONG via des étapes simples : signaler, cartographier, accompagner"
+        }
+      }
+    },
+    "actions": {
+      "label": "Ce que vous pouvez faire",
+      "title": "Participez depuis votre rôle",
+      "subtitle": "Le portail facilite la cartographie, les connexions et les signalements",
+      "cards": {
+        "map": {
+          "title": "Explorer la carte",
+          "description": "Filtrez pistes cyclables, projets et zones critiques avec des couches claires"
+        },
+        "advocacy": {
+          "title": "Soutenir les groupes",
+          "description": "Découvrez les initiatives locales et rejoignez leur travail"
+        },
+        "report": {
+          "title": "Signaler et valider",
+          "description": "Décrivez les obstacles et ajoutez des photos pour améliorer la réponse"
+        }
+      }
+    },
+    "news": {
+      "label": "Actualités",
+      "title": "Dernières mises à jour",
+      "description": "Nous suivons la conversation nationale pour rendre chaque progrès transparent",
+      "items": {
+        "passed": {
+          "title": "Loi 9660",
+          "description": "La loi impose l'infrastructure cyclable et soutient notre cartographie"
+        },
+        "cartago": {
+          "title": "Cartago en mouvement",
+          "description": "La province mène avec des voies protégées et des trajets scolaires"
+        },
+        "community": {
+          "title": "Communautés connectées",
+          "description": "+15 collectifs partagent des signalements et pratiques chaque semaine"
+        }
+      }
+    }
+  },
+  "footer": {
+    "openSource": "Code Ouvert",
+    "dataSource": "Données de sources publiques"
+  }
+}

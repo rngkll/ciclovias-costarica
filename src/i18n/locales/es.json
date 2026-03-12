@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "map": "Mapa",
+    "advocacy": "Advocacia",
+    "about": "Acerca de",
+    "status": "Estado",
+    "report": "Reportar"
+  },
+  "home": {
+    "hero": {
+      "highlight": "Red ciclista abierta",
+      "title": "Ciclovías Costa Rica",
+      "subtitle": "Explora y contribuye al estado de la infraestructura ciclista en Costa Rica",
+      "note": "Combinamos datos oficiales, señales comunitarias y rutas futuras",
+      "cta": {
+        "map": "Ver Mapa Interactivo",
+        "advocacy": "Explorar Advocacia",
+        "report": "Reportar un punto crítico"
+      }
+    },
+    "stats": {
+      "law": {
+        "title": "Ley 9660",
+        "description": "Mandata infraestructura ciclista en nuevas carreteras"
+      },
+      "cartago": {
+        "title": "Cartago Lidera",
+        "description": "La provincia más avanzada en ciclovías del país"
+      },
+      "groups": {
+        "title": "Grupos Activos",
+        "description": "Comunidades trabajando por movilidad sostenible"
+      }
+    },
+    "features": {
+      "title": "Características Principales",
+      "subtitle": "Herramientas para explorar, entender y mejorar la infraestructura ciclista de Costa Rica",
+      "map": {
+        "title": "Mapa Interactivo",
+        "description": "Visualiza ciclovías existentes y propuestas usando datos abiertos"
+      },
+      "advocacy": {
+        "title": "Grupos de Advocacia",
+        "description": "Descubre organizaciones trabajando por la movilidad sostenible"
+      },
+      "report": {
+        "title": "Reportar Problemas",
+        "description": "Ayuda a mantener actualizada la información sobre ciclovías"
+      }
+    },
+    "cta": {
+      "title": "¿Ves un problema con una ciclovía?",
+      "subtitle": "Tu reporte ayuda a mantener la información actualizada y promover mejoras",
+      "button": "Reportar Problema"
+    },
+    "mission": {
+      "label": "Nuestra misión",
+      "title": "Visibilidad, datos y comunidad",
+      "description": "Centralizamos la información de ciclovías para que colectivos, municipios y tomadores de decisiones trabajen juntos",
+      "points": {
+        "data": {
+          "title": "Datos abiertos",
+          "description": "Priorizamos fuentes públicas y mediciones comunitarias para mantener cada kilómetro rastreado"
+        },
+        "community": {
+          "title": "Comunidad activa",
+          "description": "Colaboramos con grupos locales para escuchar necesidades reales en cada provincia"
+        },
+        "action": {
+          "title": "Acciones claras",
+          "description": "Guiamos a ciclistas, municipios y ONG con pasos simples: reportar, mapear y acompañar"
+        }
+      }
+    },
+    "actions": {
+      "label": "Qué puedes hacer",
+      "title": "Participa desde cualquier rol",
+      "subtitle": "El portal facilita mapear, conectar y reportar sin tecnicismos",
+      "cards": {
+        "map": {
+          "title": "Explorar el mapa",
+          "description": "Filtra ciclovías, proyectos y zonas críticas con capas claras"
+        },
+        "advocacy": {
+          "title": "Apoyar grupos",
+          "description": "Descubre iniciativas cercanas y únete a su trabajo"
+        },
+        "report": {
+          "title": "Reportar y validar",
+          "description": "Describe obstáculos y adjunta fotos para mejorar la respuesta"
+        }
+      }
+    },
+    "news": {
+      "label": "Novedades",
+      "title": "Últimas actualizaciones",
+      "description": "Seguimos la conversación nacional para que cada avance sea transparente",
+      "items": {
+        "passed": {
+          "title": "Ley 9660",
+          "description": "La legislación exige infraestructura ciclista en nuevas vías y respalda nuestra cartografía"
+        },
+        "cartago": {
+          "title": "Cartago en movimiento",
+          "description": "La provincia lidera con nuevos carriles protegidos y rutas escolares"
+        },
+        "community": {
+          "title": "Comunidades conectadas",
+          "description": "+15 colectivos comparten reportes y mejores prácticas cada semana"
+        }
+      }
+    }
+  },
+  "footer": {
+    "openSource": "Código abierto",
+    "dataSource": "Datos de fuentes públicas"
+  }
+}

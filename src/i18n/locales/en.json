@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "advocacy": "Advocacy",
+    "about": "About",
+    "status": "Status",
+    "report": "Report"
+  },
+  "home": {
+    "hero": {
+      "highlight": "Open cycling network",
+      "title": "Ciclovías Costa Rica",
+      "subtitle": "Explore and contribute to the state of cycling infrastructure in Costa Rica",
+      "note": "We blend official data, community signals, and future routes",
+      "cta": {
+        "map": "View Interactive Map",
+        "advocacy": "Explore Advocacy",
+        "report": "Report a critical spot"
+      }
+    },
+    "stats": {
+      "law": {
+        "title": "Law 9660",
+        "description": "Mandates cycling infrastructure in new roads"
+      },
+      "cartago": {
+        "title": "Cartago Leads",
+        "description": "The most advanced province in cycling infrastructure"
+      },
+      "groups": {
+        "title": "Active Groups",
+        "description": "Communities working for sustainable mobility"
+      }
+    },
+    "features": {
+      "title": "Key Features",
+      "subtitle": "Tools to explore, understand and improve Costa Rica's cycling infrastructure",
+      "map": {
+        "title": "Interactive Map",
+        "description": "Visualize existing and proposed bike lanes using open data"
+      },
+      "advocacy": {
+        "title": "Advocacy Groups",
+        "description": "Discover organizations working for sustainable mobility"
+      },
+      "report": {
+        "title": "Report Issues",
+        "description": "Help maintain updated information about bike lanes"
+      }
+    },
+    "cta": {
+      "title": "Do you see a problem with a bike lane?",
+      "subtitle": "Your report helps maintain updated information and promote improvements",
+      "button": "Report Problem"
+    },
+    "mission": {
+      "label": "Our mission",
+      "title": "Visibility, data, community",
+      "description": "We centralize bike lane information so collectives, municipalities, and decision makers can act together",
+      "points": {
+        "data": {
+          "title": "Open data",
+          "description": "We prioritize public sources and community measurements to keep every kilometer tracked"
+        },
+        "community": {
+          "title": "Active community",
+          "description": "We collaborate with local groups to understand real needs across provinces"
+        },
+        "action": {
+          "title": "Clear actions",
+          "description": "We guide cyclists, municipalities, and NGOs with simple steps: report, map, support"
+        }
+      }
+    },
+    "actions": {
+      "label": "What you can do",
+      "title": "Participate from any role",
+      "subtitle": "The portal makes mapping, connecting, and reporting easy",
+      "cards": {
+        "map": {
+          "title": "Explore the map",
+          "description": "Filter bike lanes, projects, and critical zones with clear layers"
+        },
+        "advocacy": {
+          "title": "Support groups",
+          "description": "Discover nearby initiatives and join their work"
+        },
+        "report": {
+          "title": "Report and verify",
+          "description": "Describe obstacles and attach photos to improve response"
+        }
+      }
+    },
+    "news": {
+      "label": "News",
+      "title": "Latest updates",
+      "description": "We keep the national conversation transparent so every progress is visible",
+      "items": {
+        "passed": {
+          "title": "Law 9660",
+          "description": "The law mandates cycling infrastructure and backs our cartography"
+        },
+        "cartago": {
+          "title": "Cartago in motion",
+          "description": "The province leads with protected lanes and school routes"
+        },
+        "community": {
+          "title": "Connected communities",
+          "description": "+15 collectives share reports and best practices weekly"
+        }
+      }
+    }
+  },
+  "footer": {
+    "openSource": "Open Source",
+    "dataSource": "Data from public sources"
+  }
+}
