@@ -43,6 +43,28 @@ const reportUrl = computed(() => `/${locale}/reportar`)
       </div>
     </section>
 
+    <section class="landing-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="stat-number">9660</p>
+            <p class="stat-label">{{ t('home.stats.law.title') }}</p>
+            <p class="stat-description">{{ t('home.stats.law.description') }}</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-number">1ro</p>
+            <p class="stat-label">{{ t('home.stats.cartago.title') }}</p>
+            <p class="stat-description">{{ t('home.stats.cartago.description') }}</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-number">+15</p>
+            <p class="stat-label">{{ t('home.stats.groups.title') }}</p>
+            <p class="stat-description">{{ t('home.stats.groups.description') }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="mission">
       <div class="container">
         <p class="section-label">{{ t('home.mission.label') }}</p>
@@ -153,6 +175,30 @@ const reportUrl = computed(() => `/${locale}/reportar`)
   font-size: 0.7rem;
   margin-top: 0.35rem;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.landing-stats {
+  padding: 2rem 0;
+  background: #f8fafc;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.stat-description {
+  margin-top: 0.5rem;
+  color: #475569;
+  line-height: 1.5;
 }
 
 .mission {
