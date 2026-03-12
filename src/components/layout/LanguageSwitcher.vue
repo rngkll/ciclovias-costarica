@@ -18,27 +18,22 @@ const switchLocale = (code: string) => {
   router.push({ name, params: { ...params, locale: code } })
 }
 
-const currentLocaleLabel = computed(() => {
-  const active = locales.find((item) => item.code === locale.value)
-  return active?.label || '🇨🇷 Español'
-})
+const onLocaleChange = (event: Event) => {
+  const value = (event.target as HTMLSelectElement).value
+  switchLocale(value)
+}
 </script>
 
 <template>
-  <div
-    class="text-sm px-3 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-600 font-semibold"
-  >
-    {{ currentLocaleLabel }}
-    <div class="mt-1 space-x-2">
-      <button
-        v-for="item in locales"
-        :key="item.code"
-        type="button"
-        class="px-2 py-1 rounded text-blue-600 hover:bg-blue-100"
-        @click="switchLocale(item.code)"
-      >
+  <div>
+    <select
+      class="text-sm px-3 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-600 font-semibold"
+      :value="locale"
+      @change="onLocaleChange"
+    >
+      <option v-for="item in locales" :key="item.code" :value="item.code">
         {{ item.label }}
-      </button>
-    </div>
+      </option>
+    </select>
   </div>
 </template>
