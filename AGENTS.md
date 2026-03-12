@@ -13,6 +13,7 @@ This project aims to check and display the current state of bike lanes across Co
 - Everything is open source
 
 ## Tool selection
+- vue.js
 - CyclOSM
 
 ## Build, Test & Lint Commands
