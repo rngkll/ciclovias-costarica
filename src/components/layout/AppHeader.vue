@@ -23,7 +23,7 @@ const navigationItems = computed(() => [
 <template>
   <header class="bg-white shadow-sm border-b border-gray-200">
     <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center h-16 gap-8">
         <RouterLink :to="`/${currentLocale.value}`" class="flex items-center space-x-2">
           <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -47,34 +47,10 @@ const navigationItems = computed(() => [
           </RouterLink>
         </nav>
 
-        <LanguageSwitcher />
-
-        <button
-          class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+        <div class="ml-auto flex items-center">
+          <LanguageSwitcher />
+        </div>
       </div>
-    </div>
-    <div class="md:hidden hidden bg-gray-50 border-t border-gray-200">
-      <nav class="px-2 pt-2 pb-3 space-y-1">
-        <RouterLink
-          v-for="item in navigationItems"
-          :key="item.name"
-          :to="item.path"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-md"
-          :class="{ 'text-blue-600 bg-blue-50': route.path === item.path }"
-        >
-          {{ item.label }}
-        </RouterLink>
-      </nav>
     </div>
   </header>
 </template>
