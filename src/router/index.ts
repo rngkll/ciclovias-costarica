@@ -6,6 +6,10 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/es',
+    },
+    {
+      path: '/:locale',
       name: 'home',
       component: HomeView,
     },

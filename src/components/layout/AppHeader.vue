@@ -7,9 +7,7 @@ import LanguageSwitcher from './LanguageSwitcher.vue'
 const { t } = useI18n()
 const route = useRoute()
 
-const currentLocale = computed(() => {
-  return (route.params.locale as string) || 'es'
-})
+const currentLocale = computed(() => (route.params.locale as string) || 'es')
 
 const navigationItems = computed(() => [
   { name: 'home', path: `/${currentLocale.value}`, label: t('nav.home') },
